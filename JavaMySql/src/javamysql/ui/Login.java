@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import javamysql.helper.Controller;
+
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.GroupLayout;
@@ -23,6 +26,20 @@ public class Login extends JFrame {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
+	
+	
+	private final Controller controller;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	/**
 	 * Launch the application.
@@ -104,8 +121,8 @@ public class Login extends JFrame {
 									.addGap(27)
 									.addComponent(btnNewButton_2, GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
 								.addComponent(textField_1, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 442, GroupLayout.PREFERRED_SIZE)
-								.addComponent(textField, Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 442, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap())
+								.addComponent(textField, GroupLayout.PREFERRED_SIZE, 442, GroupLayout.PREFERRED_SIZE))))
+					.addGap(10))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -114,9 +131,9 @@ public class Login extends JFrame {
 					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
 					.addGap(116)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING, false)
-						.addComponent(textField)
+						.addComponent(textField, GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
 						.addComponent(lblUserName, GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE))
-					.addPreferredGap(ComponentPlacement.RELATED)
+					.addGap(6)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 41, GroupLayout.PREFERRED_SIZE)
 						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE))
@@ -128,5 +145,8 @@ public class Login extends JFrame {
 					.addContainerGap(135, Short.MAX_VALUE))
 		);
 		contentPane.setLayout(gl_contentPane);
+		
+		
+		this.controller = Controller.getController(); 
 	}
 }
