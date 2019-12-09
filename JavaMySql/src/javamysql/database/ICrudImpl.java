@@ -2,8 +2,6 @@ package javamysql.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.Collection;
-
 import javamysql.model.User;
 
 public class ICrudImpl  implements ICrud{
@@ -26,7 +24,7 @@ public class ICrudImpl  implements ICrud{
 	{
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			this.connection = DriverManager.getConnection("jdbc://mysql://localhost:80/java_db", "root", "");
+			this.connection = DriverManager.getConnection("jdbc:mysql://localhost/java_db", "root", "");
 			System.out.println("connectio estableshed");
 			
 		} catch (Exception e) {
